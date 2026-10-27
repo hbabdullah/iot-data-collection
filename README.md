@@ -175,6 +175,7 @@ Telemetry messages include the asset ID, timestamp, average power, demand, energ
 ## PostgreSQL Database
 
 The `industrial_telemetry` table stores:
+A unique constraint prevents duplicate industrial readings from being stored when the same MQTT messages are published more than once.
 
 | Column | Description |
 |---|---|
