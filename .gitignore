@@ -1,4 +1,5 @@
-
 .venv/
 __pycache__/
 .env
+data/fact_energy_15m.parquet
+data/processed_energy.csv

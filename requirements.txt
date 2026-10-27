@@ -3,3 +3,5 @@ paho-mqtt
 psycopg[binary]
 python-dotenv
 matplotlib
+pyarrow
+pymodbus
