@@ -51,7 +51,9 @@ def on_message(client, userdata, message):
                         energy_kwh_15m,
                         source
                     )
-                    VALUES (%s, %s, %s, %s, %s, %s)
+                                        VALUES (%s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (asset_id, timestamp, avg_power_kw_15m, demand_kw, energy_kwh_15m)
+                    DO NOTHING
                     """,
                     (
                         data["asset_id"],
